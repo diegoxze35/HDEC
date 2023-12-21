@@ -52,12 +52,12 @@ class HDECViewModel : ViewModel() {
 			val bString = when {
 				b == 0.0 -> ""
 				b > 0 -> " + ${b}x"
-				else -> " - ${b}x"
+				else -> " - ${-b}x"
 			}
 			val cString = when {
 				c == 0.0 -> ""
 				c > 0 -> " + $c"
-				else -> " - $c"
+				else -> " - ${-c}"
 			}
 			steps.add(R.string.characteristic_polynomial to "${a}x²${bString}${cString}")
 			val discriminating = (b * b) - (4 * a * c)
