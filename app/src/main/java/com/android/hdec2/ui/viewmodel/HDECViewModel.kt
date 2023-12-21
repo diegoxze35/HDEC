@@ -46,8 +46,8 @@ class HDECViewModel : ViewModel() {
 		get() = allInvalidCoefficients.values.all { !it }
 	
 	fun calculateRoots(numericCoefficients: NumericCoefficients) {
-		steps.clear()
 		viewModelScope.launch(context = Dispatchers.Default) {
+			steps.clear()
 			val (a, b, c) = numericCoefficients
 			val bString = when {
 				b == 0.0 -> ""
@@ -64,9 +64,11 @@ class HDECViewModel : ViewModel() {
 			currentResult = if (discriminating < 0) {
 				val alpha = -b / (2 * a)
 				val beta = sqrt(-discriminating) / (2 * a)
-				steps.add(R.string.imaginary_roots to (if (alpha > 0.0) "$alpha" else "0") +
-						" ± (√(${-discriminating})i) / ${2 * a}\n" +
-						"${if (alpha > 0.0) "$alpha" else "0"} ± ${beta}i")
+				steps.add(
+					R.string.imaginary_roots to (if (alpha > 0.0) "$alpha" else "0") +
+							" ± (√(${-discriminating})i) / ${2 * a}\n" +
+							"${if (alpha > 0.0) "$alpha" else "0"} ± ${beta}i"
+				)
 				ImaginaryRoot(alpha = alpha, beta = beta, discriminating = -discriminating)
 			} else if (discriminating == 0.0) {
 				val root = -b / (2 * a)
