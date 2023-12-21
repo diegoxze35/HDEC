@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">HDEC2</string>
+	<string name="y_second" translatable="false">y\'\'</string>
+	<string name="y_first" translatable="false">y\'</string>
+	<string name="y_function" translatable="false">y</string>
+	<string name="calculate_message">Calculate</string>
+	<string name="characteristic_polynomial">Characteristic Polynomial</string>
+	<string name="roots">Roots</string>
+	<string name="imaginary_roots">Imaginary Roots</string>
+	<string name="repeat_root">Repeat Roots</string>
+	<string name="Solution">Solution</string>
+</resources>

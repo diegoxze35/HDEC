@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">HDEC2</string>
+	<string name="calculate_message">Calcular</string>
+	<string name="characteristic_polynomial">Polinomio Característico</string>
+	<string name="roots">Raíces</string>
+	<string name="imaginary_roots">Raíces Imaginarias</string>
+	<string name="repeat_root">Raíces Repetidas</string>
+	<string name="Solution">Solución</string>
+</resources>
